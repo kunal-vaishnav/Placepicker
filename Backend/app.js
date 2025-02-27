@@ -85,10 +85,10 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const data_path = path.join(__dirname, "data");
-
+const cors=require("cors");
 app.use(express.static(path.join(__dirname, "images")));
 app.use(bodyParser.json());
-
+app.use(cors());
 // CORS
 
 app.use((req, res, next) => {
