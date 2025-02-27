@@ -1,4 +1,4 @@
-import API from "./Constant.js";
+import {API} from "./Constant.js";
 export async function fetchavailableplaces() {
   const response = await fetch(API + "places");
   const resdata = await response.json();
