@@ -91,13 +91,13 @@ app.use(bodyParser.json());
 app.use(cors());
 // CORS
 
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", "*"); // allow all domains
-//   res.setHeader("Access-Control-Allow-Methods", "GET, PUT");
-//   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*"); // allow all domains
+  res.setHeader("Access-Control-Allow-Methods", "GET, PUT");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-//   next();
-// });
+  next();
+});
 
 app.get("/places", async (req, res) => {
   const placepath = path.join(data_path, "places.json");
