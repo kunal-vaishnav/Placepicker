@@ -1,4 +1,4 @@
-import { API } from "../Constant.js";
+import { API_END_POINT } from "../Constant.js";
 export default function Places({
   isloading,
   message,
@@ -20,7 +20,7 @@ export default function Places({
           {places.map((place) => (
             <li key={place.id} className="place-item">
               <button onClick={() => onSelectPlace(place)}>
-                <img src={API+`${place.image.src}`} alt={place.image.alt} />
+                <img src={API_END_POINT+`${place.image.src}`} alt={place.image.alt} />
                 <h3>{place.title}</h3>
               </button>
             </li>
