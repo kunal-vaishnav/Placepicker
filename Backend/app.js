@@ -119,7 +119,7 @@ app.get("/user-places", async (req, res) => {
 
 app.put("/user-places", async (req, res) => {
   //const userplacespath = path.join(data_path, "user-places.json");
-  const userplacespath="tmp/user-places.json"
+  const userplacespath='/tmp/user-places.json';
   const places = req.body.places;
 
   await fs.writeFile(userplacespath, JSON.stringify(places, null, 2));
